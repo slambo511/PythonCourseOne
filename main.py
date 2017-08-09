@@ -66,5 +66,16 @@ line of text."""
 # as far as Python is concerned 'hello' == "hello" == """hello"""
 # strings have a lot of functions associated with them for manipulating and formatting them, see me lesson on strings to
 # learn more
-
-
+# Boolean (note the capitals)
+is_right = True
+is_wrong = False
+# Converted to integer, a bool is 0 or 1 for False or True
+# None
+planets_colonised = None
+# None can be handy if you want to create a variable but you do not want to create a variable but you do not want to
+# assign it a value immediately. It is also handy in logic statements for example
+if planets_colonised:
+    print("We are now spacefarers")
+else:
+    print("We are still Earth bound")
+# This will print "We are still Earth bound" as planets_colonised is None.
