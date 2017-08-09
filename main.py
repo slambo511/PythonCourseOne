@@ -44,15 +44,20 @@ def add_numbers(a, b):
 # using an IDE that supports type hinting, it will warn you before you try to run the code but it will not stop you.
 
 # Python's built-in types
+
 # integer
 meaning_of_life = 42
+
 # floating point numbers
 pi = 3.1415926535
+
 # complex numbers
 pi_life = meaning_of_life ** pi
+
 # casting between types
 int(pi) == 3
 float(meaning_of_life) == 42.0
+
 # strings (unicode in Python 3)
 my_text = "Hello, world!"
 my_quote = 'I always say "there are no silly questions"'
@@ -66,10 +71,12 @@ line of text."""
 # as far as Python is concerned 'hello' == "hello" == """hello"""
 # strings have a lot of functions associated with them for manipulating and formatting them, see me lesson on strings to
 # learn more
+
 # Boolean (note the capitals)
 is_right = True
 is_wrong = False
 # Converted to integer, a bool is 0 or 1 for False or True
+
 # None
 planets_colonised = None
 # None can be handy if you want to create a variable but you do not want to create a variable but you do not want to
@@ -78,4 +85,22 @@ if planets_colonised:
     print("We are now spacefarers")
 else:
     print("We are still Earth bound")
-# This will print "We are still Earth bound" as planets_colonised is None.
+# This will print "We are still Earth bound" as planets_colonised is None which equates to False.
+
+# A ! symbol is used to denote "not" in checks, so == means "is equal" and != means "is not equal"
+# You can also use "and" and "or" keywords in if statements:
+if planets_colonised != True and meaning_of_life == 42.0:
+    print("We are Earth bound and the meaning of life is still 42.")
+else:
+    print("Don't ask me, I don't know any more.")
+if pi == 3 or pi == 3.1415926535:
+    print("Phew Pi is still the same.")
+else:
+    print("Panic, Pi has changed we are all doomed!!")
+# You can also use one line if statements (known as "ternary statements")
+a = 1
+b = 2
+print("bigger") if a > b else print("smaller")
+# This will print "smaller" as a is < b
+
+# Lists
