@@ -215,3 +215,5 @@ print("We are finished")
 # "Do this X times"
 # while loop == used when you are uncertain how many times you need to iterate or the number of iteration is variable
 # "Do this until Y"
+# Loops are explained in more detail in the appropriate lesson. Familiarise yourself with loops they are some of the
+# most important building blocks in programming.
