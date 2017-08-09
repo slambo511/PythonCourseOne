@@ -55,7 +55,7 @@ int(pi) == 3
 float(meaning_of_life) == 42.0
 # strings (unicode in Python 3)
 my_text = "Hello, world!"
-my_quote = 'I always say "there are no sill questions"'
+my_quote = 'I always say "there are no silly questions"'
 my_wall_of_text = """"I love to write
 lines and
 lines and
