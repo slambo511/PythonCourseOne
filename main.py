@@ -217,3 +217,5 @@ print("We are finished")
 # "Do this until Y"
 # Loops are explained in more detail in the appropriate lesson. Familiarise yourself with loops they are some of the
 # most important building blocks in programming.
+# NTS include break and continue
+
