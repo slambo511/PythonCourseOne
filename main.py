@@ -219,3 +219,58 @@ print("We are finished")
 # most important building blocks in programming.
 # NTS include break and continue
 
+# Dictionaries
+# dictionaries are like lists but have key value pairs, like so:
+
+student = {
+    "name": "John Smith",
+    "student_id": 202111,
+    "expected_grade": "A",
+    "disciplinary_notes": None
+}
+
+# you can create a list of dictionaries
+
+year8_students = [
+    {"name": "John Smith", "student_id": 202111},
+    {"name": "Sarah Jones", "student_id": 202156},
+    {"name": "Peter Piper", "student_id": 202256}
+]
+
+# working with data from dictionaries looks like this
+# the following returns the dictionary keys, values and both together:
+
+print(student.keys())
+print(student.values())
+print(student.items())
+
+# from a list of dictionaries
+
+number_of_students = len(year8_students)
+print("\nnumber of students in list: " + str(number_of_students))
+for i in range(0, number_of_students):
+    print(year8_students[i].items())
+
+# to change a value
+
+student["name"] = "Ron Smith"
+print("\nAfter update:\n")
+print(student.items())
+
+# to remove a key pair entirely
+
+test_dict = {
+    "one": "test_one",
+    "two": "test_two",
+    "three": "test_three",
+    "four": "mistake"
+}
+
+print("\n")
+print(test_dict.items())
+print("\nRemove the keypair 'four'\n")
+del test_dict["four"]
+print(test_dict.items())
+
+# That's it for this initial look at Python, do not forget to look at the other classes mentioned here.
+# Next we are looking at OOP in Python.
