@@ -45,6 +45,38 @@ def add_numbers(a, b):
 
 # Python's built-in types
 
+# ********** BYTES **********
+
+# a bytearray is a group of bytes which can be changed
+
+array = [3, 33, 244, 255, 12, 13]
+
+barray = bytearray(array)
+
+barray[0] = 6
+barray[1] = 0
+
+for b in barray:
+    print(b)
+
+# whereas bytes is a group which cannot be changed (is immutable)
+
+array = [32, 33, 34, 35, 36]
+
+iarray = bytes(array)
+
+for i in iarray:
+    print(i)
+
+# if we try to edit iarray we will get the error:
+# TypeError: 'bytes' object does no support item assignment
+# meaning we cannot alter the iarray object once it is created.
+# A group of bytes can also be declared with string literals:
+
+lit_array = bytearray(b"test")
+for lit in lit_array:
+    print(lit)
+
 # ********** INTEGERS **********
 
 meaning_of_life = 42
@@ -219,7 +251,19 @@ print("We are finished")
 # most important building blocks in programming.
 # NTS include break and continue
 
-# Dictionaries
+# ********** TUPLES **********
+
+# tuples are immutable lists (remember immutable objects cannot be changed once instantiated)
+
+ex_tuple = (43, 34, 42, "John")
+
+for item in ex_tuple:
+    print(item)
+
+# if you try to edit ex_tuple now, you would get the same error you get when trying to alter a BYTES object
+
+# ********* DICTIONARIES **********
+
 # dictionaries are like lists but have key value pairs, like so:
 
 student = {
@@ -271,6 +315,38 @@ print(test_dict.items())
 print("\nRemove the keypair 'four'\n")
 del test_dict["four"]
 print(test_dict.items())
+
+# ********** SET / FROZENSET **********
+
+# a Set / Frozenset only holds unique values:
+
+unique_numbers = set([1,1, 2, 5, 6, 2, 6, 5, 7, 1, 7, 0])
+
+print("\n")
+print(unique_numbers)
+
+# now unique_numbers contains [0, 1, 2, 5, 6, 7] as all others in the set are repeated values. The set also orders the
+# values.
+# a frozen set is a set with immutable members. Once made immutable objects can be hashed. Hashing is a complex subject
+# but put simply you can hash different objects to compare if they contain the same values:
+
+tuple_a = (1, 2, 3)
+tuple_b = (1, 2, 3)
+
+print("\ntuple_a contains:")
+for t in tuple_a:
+    print(t)
+print("tuple_b contains:")
+for t in tuple_b:
+    print(t)
+# by using the id() function we are checking whether the two tuples point to the same object, their ids will be the same
+# if that is the case
+print("\ntuple_a is the same as tuple_b; " + str(id(tuple_a) == id(tuple_b)))
+
+t_a_hash = tuple_a.__hash__()
+t_b_hash = tuple_b.__hash__()
+
+print("\ntuple_a contains the same data as tuple_b; " + str(t_a_hash == t_b_hash))
 
 # That's it for this initial look at Python, do not forget to look at the other classes mentioned here.
 # Next we are looking at OOP in Python.
